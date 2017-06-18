@@ -1,4 +1,6 @@
-const soplon = require('./index.js');
+const soplon = require('./soplon.js');
+
+soplon.register();
 
 const fakeTrace = '(~/Projects/soplon:4:5)';
 

@@ -1,11 +1,22 @@
 {
   "name": "soplon",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "soplon.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hans-strudle/soplon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hans-strudle/soplon/issues"
+  },
+  "homepage": "https://github.com/hans-strudle/soplon#readme",
+  "description": ""
 }
