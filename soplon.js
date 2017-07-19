@@ -29,7 +29,12 @@ function blame(loc, cb){
 
 function parseBlame(blame, cb){
     var parts = blame.split(' ');
-    var rev = parts[0];
+    var rev = parts[0]; // rev is always first?
+    for (var i = 1; i < parts.length - 1; i++){
+        var isdate = (new Date(parts[i])) != 'Invalid Date';
+        console.log(parts[i]);
+        console.log(isdate);
+    }
     var user = parts[1].substring(1, parts[1].length);
     var date = new Date(parts[2] + ' ' + parts[3]);
     var line = parts.slice(6).join(' ');
@@ -52,5 +57,7 @@ function parseLocation(loc){
 module.exports = {
     register: register,
     parseStack: parseStack,
-    parseLocation: parseLocation
+    parseLocation: parseLocation,
+    parseBlame: parseBlame,
+    blame: blame
 }
